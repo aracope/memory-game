@@ -1,0 +1,171 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background-color: rgb(55, 44, 65);
+  color:antiquewhite;
+  font-family: 'Lucida Sans', Arial, Verdana, sans-serif;
+}
+
+.match-game {
+  width: 640px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.mem-card {
+  width: calc(25% - 3px);
+  height: (33.333% - 3px);
+  position: relative;
+  margin: 1.5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.mem-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.mem-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face, 
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 10px;
+  border: 2px solid aqua;
+  backface-visibility: hidden;
+  
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.actions button {
+  padding: 8px 16px;
+  font-size: 15px;
+  border-radius: 30px;
+  background-color: rgb(0, 180, 204);
+  color: rgb(55, 44, 65);
+}
+
+
+/* body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: rgb(55, 44, 65);
+  color:antiquewhite;
+  font-family: 'Lucida Sans', Arial, Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+.actions button {
+  padding: 8px 16px;
+  font-size: 15px;
+  border-radius: 30px;
+  background-color: rgb(0, 180, 204);
+  color: rgb(55, 44, 65);
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  grid-gap: 16px;
+  grid-template-columns: repeat(6, 140px);
+  grid-template-rows: repeat(6, calc(140px / 2 * 3));
+}
+
+.card {
+  height: calc(140px / 2 * 3);
+  width: 140px;
+  border-radius: 10px;
+  background-color: antiquewhite;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: all 0.5s ease-in-out;
+}
+
+.front-image {
+  width: 60px;
+  height: 60px;
+}
+
+.card.flipped {
+  transform: rotateY('180deg');
+
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.card .front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY('180deg');
+}
+
+.card .back {
+  background-image: url(img/forest.jpg);
+  background-position: center center;
+  background-size: cover;
+  backface-visibility: hidden;
+} */
+
+
